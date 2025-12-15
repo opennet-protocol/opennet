@@ -1,0 +1,18 @@
+[package]
+name = "opennet-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Core types for OpenNet protocol"
+
+# RFC: OpenNet Core Protocol
+
+[dependencies]
+ed25519-dalek.workspace = true
+sha2.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+fixed.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

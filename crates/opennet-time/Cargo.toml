@@ -1,0 +1,18 @@
+[package]
+name = "opennet-time"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Time and epoch semantics for OpenNet"
+
+# RFC: Time & Epoch Semantics RFC
+
+[dependencies]
+opennet-core.workspace = true
+fixed.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+indexmap.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

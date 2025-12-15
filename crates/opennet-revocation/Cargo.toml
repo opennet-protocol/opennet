@@ -1,0 +1,18 @@
+[package]
+name = "opennet-revocation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Revocation and recovery for OpenNet"
+
+# RFC: Revocation & Recovery RFC
+
+[dependencies]
+opennet-core.workspace = true
+opennet-wire.workspace = true
+opennet-identity.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

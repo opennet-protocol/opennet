@@ -1,0 +1,28 @@
+[package]
+name = "opennet-node"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Full-node implementation for OpenNet"
+
+# RFC: Full-Node State Machine RFC
+# RFC: Full-Node Behavior & Integration RFC
+
+[dependencies]
+opennet-core.workspace = true
+opennet-wire.workspace = true
+opennet-identity.workspace = true
+opennet-revocation.workspace = true
+opennet-time.workspace = true
+opennet-trust.workspace = true
+opennet-resolver.workspace = true
+opennet-transport.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+tokio-test = "0.4"
+tracing-subscriber.workspace = true

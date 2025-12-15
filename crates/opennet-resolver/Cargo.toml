@@ -1,0 +1,27 @@
+[package]
+name = "opennet-resolver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Resolver daemon for OpenNet"
+
+# RFC: Resolver Daemon RFC
+
+[dependencies]
+opennet-core.workspace = true
+opennet-wire.workspace = true
+opennet-trust.workspace = true
+tokio.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+indexmap.workspace = true
+
+[target.'cfg(unix)'.dependencies]
+tokio = { workspace = true, features = ["net"] }
+
+[target.'cfg(windows)'.dependencies]
+tokio = { workspace = true, features = ["net"] }
+
+[dev-dependencies]
+proptest.workspace = true
+tokio-test = "0.4"

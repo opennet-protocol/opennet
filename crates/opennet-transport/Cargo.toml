@@ -1,0 +1,22 @@
+[package]
+name = "opennet-transport"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Transport layer for OpenNet (QUIC/TCP)"
+
+# RFC: Transport RFC
+
+[dependencies]
+opennet-core.workspace = true
+opennet-wire.workspace = true
+opennet-identity.workspace = true
+opennet-trust.workspace = true
+quinn.workspace = true
+rustls.workspace = true
+tokio.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+tokio-test = "0.4"

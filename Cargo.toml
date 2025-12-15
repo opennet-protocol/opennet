@@ -1,0 +1,82 @@
+# OpenNet Workspace Root
+# RFC: OpenNet Core Protocol
+
+[workspace]
+resolver = "2"
+members = [
+    "crates/opennet-core",
+    "crates/opennet-wire",
+    "crates/opennet-identity",
+    "crates/opennet-revocation",
+    "crates/opennet-time",
+    "crates/opennet-trust",
+    "crates/opennet-resolver",
+    "crates/opennet-transport",
+    "crates/opennet-node",
+    "crates/opennet-tests",
+    "bins/opennet-daemon",
+    "bins/opennet-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/opennet-protocol/opennet"
+authors = ["OpenNet Contributors"]
+
+[workspace.dependencies]
+# Internal crates
+opennet-core = { path = "crates/opennet-core" }
+opennet-wire = { path = "crates/opennet-wire" }
+opennet-identity = { path = "crates/opennet-identity" }
+opennet-revocation = { path = "crates/opennet-revocation" }
+opennet-time = { path = "crates/opennet-time" }
+opennet-trust = { path = "crates/opennet-trust" }
+opennet-resolver = { path = "crates/opennet-resolver" }
+opennet-transport = { path = "crates/opennet-transport" }
+opennet-node = { path = "crates/opennet-node" }
+
+# Cryptography
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+sha2 = "0.10"
+rand = "0.8"
+rand_chacha = "0.3"
+
+# Serialization (CBOR)
+ciborium = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_bytes = "0.11"
+
+# Networking
+tokio = { version = "1.35", features = ["full"] }
+quinn = "0.11"                    # QUIC implementation
+rustls = "0.23"
+
+# Fixed-point arithmetic (NO FLOATING POINT)
+fixed = "1.24"
+num-traits = "0.2"
+
+# Collections (deterministic)
+indexmap = "2.1"                  # Ordered map
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Testing
+proptest = "1.4"
+criterion = "0.5"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

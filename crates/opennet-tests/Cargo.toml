@@ -1,0 +1,29 @@
+[package]
+name = "opennet-tests"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Compliance and integration tests for OpenNet"
+
+# RFC: Compliance Test Vectors RFC
+# RFC: FSM Exhaustive Test Suite RFC
+
+[dependencies]
+opennet-core.workspace = true
+opennet-wire.workspace = true
+opennet-identity.workspace = true
+opennet-revocation.workspace = true
+opennet-time.workspace = true
+opennet-trust.workspace = true
+opennet-resolver.workspace = true
+opennet-transport.workspace = true
+opennet-node.workspace = true
+ciborium.workspace = true
+serde.workspace = true
+serde_json = "1.0"
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+tokio-test = "0.4"
+criterion.workspace = true
