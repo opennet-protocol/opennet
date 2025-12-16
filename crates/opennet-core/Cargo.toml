@@ -13,6 +13,7 @@ sha2.workspace = true
 serde.workspace = true
 thiserror.workspace = true
 fixed.workspace = true
+hex = "0.4"
 
 [dev-dependencies]
 proptest.workspace = true

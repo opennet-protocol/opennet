@@ -1,0 +1,1 @@
+pub const DEFAULT_CONNECT_THRESHOLD: f64 = 0.3;
