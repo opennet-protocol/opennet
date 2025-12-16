@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Opennet Assets/fulllogo.png" alt="OpenNet Logo" width="400">
+</p>
+
 # OpenNet: A Service-Centric, Decentralized Internet Protocol
 
 ## Comprehensive Technical Whitepaper
