@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Opennet Assets/fulllogo.png" alt="OpenNet Logo" width="400">
+  <img src="Opennet Assets/fulllogo_transparent.png" alt="OpenNet Logo" width="400">
 </p>
 
 # OpenNet: A Service-Centric, Decentralized Internet Protocol
